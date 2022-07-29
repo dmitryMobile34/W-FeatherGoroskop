@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFF">
+
+    <ImageView
+        android:id="@+id/mainLogo"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+
+        android:src="@drawable/logo"
+        android:layout_margin="30dp"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mainCard"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#FFF"
+        app:strokeColor="#243581"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="25dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainLogo"
+        app:layout_constraintBottom_toTopOf="@id/mainButton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.dragankrstic.autotypetextview.AutoTypeTextView
+                android:id="@+id/mainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:gravity="center"
+                android:text="для начала нажми на кнопку, чтобы открыть будущее"
+                android:textSize="17dp"
+                android:padding="20dp"
+                android:textColor="#401E1D22"
+                android:fontFamily="@font/latoregular"
+                android:background="#00FFFFFF"
+                android:textStyle="italic"
+
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/mainButton"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:text="открыть будущее"
+        android:layout_margin="30dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
